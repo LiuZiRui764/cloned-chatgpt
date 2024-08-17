@@ -26,5 +26,5 @@ def generate_script(subject,video_length,creativity,api_key):
     title = title_chain.invoke({"subject":subject}).content
     script = script_chain.invoke({"title":title,"video_length":video_length}).content
     return title,script
-# print(generate_script(" 第五人格",1,0.7, os.getenv("OPENAI_API_KEY")))
+print(generate_script(" 第五人格",1,0.7, os.getenv("OPENAI_API_KEY")))
 
